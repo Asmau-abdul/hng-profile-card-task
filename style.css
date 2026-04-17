@@ -1,0 +1,118 @@
+:root {
+    --primary: #2563eb;
+    --text-main: #1f2937;
+    --text-muted: #4b5563;
+    --bg-card: #ffffff;
+    --bg-body: #f3f4f6;
+}
+
+body {
+    font-family: system-ui, -apple-system, sans-serif;
+    background-color: var(--bg-body);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    padding: 20px;
+}
+
+.profile-card {
+    background: var(--bg-card);
+    border-radius: 12px;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+    max-width: 800px;
+    width: 100%;
+    overflow: hidden;
+    display: grid;
+    grid-template-columns: 1fr; /* Mobile First */
+}
+
+@media (min-width: 640px) {
+    .profile-card {
+        grid-template-columns: 300px 1fr;
+    }
+}
+
+.profile-avatar-wrapper {
+    margin: 0;
+    background: #e5e7eb;
+}
+
+.profile-avatar {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.profile-content {
+    padding: 2rem;
+}
+
+.time-container {
+    margin: 1rem 0;
+    padding: 0.5rem;
+    background: #f9fafb;
+    border-left: 4px solid var(--primary);
+    font-family: monospace;
+}
+
+.social-links {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.social-links a {
+    color: var(--primary);
+    text-decoration: none;
+    font-weight: 600;
+    transition: 0.5s ease-in-out;
+}
+
+.social-links a:hover, .social-links a:focus{
+    border-radius: 5px;
+    color: white;
+    font-weight: 300;
+    font-size: 10px;
+    padding: 8px 12px;
+    background-color: var(--primary);
+    border: none;
+    transition: 0.5s ease-in-out;
+}
+
+/* .social-links a:focus {
+    outline: 3px solid var(--primary);
+    border-radius: 5px;
+    color: white;
+    background-color: var(--primary);
+    border: none;
+    transition: 0.18s ease-in-out;
+} */
+
+.interests-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+h2 { 
+    margin: 0 0 0.5rem 0; 
+    color: var(--text-main); 
+}
+
+p {
+     color: var(--text-muted); line-height: 1.5; 
+}
+
+h3 { 
+    font-size: 1rem; 
+    margin-bottom: 0.5rem; 
+}
+
+ul { 
+    padding-left: 1.2rem; 
+    margin: 0; color: var(--text-muted); 
+}

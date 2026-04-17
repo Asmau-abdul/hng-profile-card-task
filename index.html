@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Frontend Wizard Profile Card</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <article class="profile-card" data-testid="test-profile-card">
+        <figure class="profile-avatar-wrapper">
+            <img 
+                src="avatar.jpeg" 
+                alt="Professional headshot of Asmau Yusuf Abdullahi" 
+                data-testid="test-user-avatar"
+                class="profile-avatar"
+            >
+        </figure>
+
+        <div class="profile-content">
+            <header>
+                <h2 data-testid="test-user-name">Asmau Yusuf Abdullahi</h2>
+                <p data-testid="test-user-bio">
+                    Frontend developer passionate about building accessible interfaces and clean, testable code. 
+                    Always learning, one commit at a time.
+                </p>
+            </header>
+
+            <div class="time-container">
+                <strong>Current Epoch (ms):</strong>
+                <span 
+                    data-testid="test-user-time" 
+                    id="epoch-time" 
+                    aria-live="polite"
+                >0</span>
+            </div>
+
+            <nav class="social-links" data-testid="test-user-social-links" aria-label="Social media links">
+                <a href="https://github.com/Asmau-abdul/" target="_blank" rel="noopener noreferrer" data-testid="test-user-social-github">GitHub</a>
+                <a href="http://linkedin.com/in/asma-u-abdullahi-012895171/" target="_blank" rel="noopener noreferrer" data-testid="test-user-social-linkedin">LinkedIn</a>
+                <a href="https://x.com/asmau_abdull" target="_blank" rel="noopener noreferrer" data-testid="test-user-social-twitter">Twitter</a>
+            </nav>
+
+            <hr>
+
+            <div class="interests-grid">
+                <section aria-labelledby="hobbies-title">
+                    <h3 id="hobbies-title">Hobbies</h3>
+                    <ul data-testid="test-user-hobbies">
+                        <li>Crotcheting</li>
+                        <li>Baking</li>
+                        <li>Playing Games</li>
+                    </ul>
+                </section>
+
+                <section aria-labelledby="dislikes-title">
+                    <h3 id="dislikes-title">Dislikes</h3>
+                    <ul data-testid="test-user-dislikes">
+                        <li>Broken Alt Text</li>
+                        <li>Global CSS Conflicts</li>
+                        <li>Caffeine-free Coffee</li>
+                    </ul>
+                </section>
+            </div>
+        </div>
+    </article>
+
+    <script src="script.js"></script>
+</body>
+</html>
